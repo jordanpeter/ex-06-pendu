@@ -1,24 +1,18 @@
 var motArray=['B','O','N','J','O','U','R'];
 var guessArray=['','','','','','',''];
 var x = 0 ;
-var i = 0;
 function guessLetter() {
-
-          while(x<motArray.length) {
-               var lettre = prompt("Une lettre frr ?");
-               if(lettre == motArray[i]){
+     while(x<motArray.length){
+     var lettre = prompt("Une lettre frr ?");
+          for (var i = 0; i < motArray.length; i++) {
+               if(motArray[i] == lettre){
                     guessArray[i] = lettre;
-                    x++;
                     alert("Bien joué ! Lettre trouvée");
                     console.log(guessArray);
-               }
-               else{
-                    i++;
+                    x++;
                }
      }
-
-
-console.log(guessArray);
+     }
+     alert("BIEN JOUER TA GAGNER FRR");
 }
 guessLetter();
-// check for in
